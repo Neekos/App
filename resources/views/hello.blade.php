@@ -4,8 +4,8 @@
 	<title>title</title>
 </head>
 <body>
-	<h1>Hello <?php foreach ($world as $worlds): ?>
-				<?=$worlds;?>
-			<?php endforeach ?></h1><!--Вывод массива-->
+	<h1>Hello @foreach ($world as $worlds)
+				{{$worlds}}
+			@endforeach <!--Вывод массива второй способ через шаблон blade-->
 </body>
 </html>
