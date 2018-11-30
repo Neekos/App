@@ -17,7 +17,5 @@ Route::get('/', function () {
 /*Построение роутинга hello*/
 Route::get('hello', function () {
 	$world = 'World';/* Объявление переменной*/
-    return view('hello',[
-    	'world'=>$world 
-    	]);
+    return view('hello', compact('world'));/*Второй способ объявления переменных*/
 });
