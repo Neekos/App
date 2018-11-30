@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('hello', function () {
+	$world = 'World';
+    return view('hello',[
+    	'world'=>$world
+    	]);
+});
