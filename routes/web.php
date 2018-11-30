@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 /*Построение роутинга hello*/
 Route::get('hello', function () {
-	$world = 'World';/* Объявление переменной*/
-    return view('hello', compact('world'));/*Второй способ объявления переменных*/
+	$world = [
+		'one',
+		'two',
+		'tree'
+	];/* Объявление массива*/
+    return view('hello', compact('world'));/*Объявление массивов*/
 });
