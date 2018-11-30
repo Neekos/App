@@ -14,9 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/*Построение роутинга hello*/
 Route::get('hello', function () {
-	$world = 'World';
+	$world = 'World';/* Объявление переменной*/
     return view('hello',[
-    	'world'=>$world
+    	'world'=>$world 
     	]);
 });
