@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTasksTable extends Migration
+class CreateTableMy extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create('type', function (Blueprint $table) {
+        Schema::create('mytable', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type');
+        Schema::dropIfExists('mytable');
     }
 }
