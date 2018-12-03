@@ -23,3 +23,8 @@ Route::get('hello', function () {
 	];/* Объявление массива*/
     return view('hello', compact('world'));/*Объявление массивов*/
 });
+
+Route::get('table', function () {
+	$table = DB::table('mytable')->get();
+    return view('table', compact('table'));
+});
