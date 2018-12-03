@@ -25,6 +25,12 @@ Route::get('hello', function () {
 });
 
 Route::get('table', function () {
-	$table = DB::table('mytable')->get();
-    return view('table', compact('table'));
+	$table = DB::table('mytable')->get();//Получить данные из бд
+    return view('table.index', compact('table'));
+});
+
+Route::get('table/{num}', function ($id) {
+	$num = DB::table('mytable')->find($id);//Получить данные из бд по id
+    //dd($num);//dump and dump
+    return view('table.show', compact('num'));
 });
