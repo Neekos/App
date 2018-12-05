@@ -2,8 +2,8 @@
 	@section('content')
 	<div class="row">
 		<div class="container">
-			<h1>Header</h1>
-			<p>Post</p>	
+			<h1>{{$post->title}}</h1>
+			<p>{{$post->body}}</p>	
 		</div>
 	</div>
 		
