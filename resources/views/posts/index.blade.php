@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 	    <main role="main">
@@ -19,10 +19,6 @@
                 <div class="card-body">
                 	<h3><a href="posts/{{$value->id}}">{{$value->title}}</a></h3>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
                     <small class="text-muted">{{$value->created_at}}</small>
                   </div>
                 </div>
